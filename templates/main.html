@@ -1,0 +1,235 @@
+<!--Navbar -->
+
+<!--Main Navigation-->
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top  white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span>Lit's Learn</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.contact">Contat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  uk-toggle="target: #modal-example">Sing Up</a>
+            <!-- This is the modal -->
+            <div id="modal-example" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body" style="margin-top: 50px;">
+                  <button class="uk-modal-close-default" type="button" uk-close></button>
+                  <ul class="uk-flex-center" uk-tab uk-switcher>
+                    <li><a href="#">Sing Up</a></li>
+                    <li><a href="#">Sing In</a></li>
+                </ul>
+                
+                <ul class="uk-switcher uk-margin">
+                    <li>
+                      <!-- Default form register -->
+                      <form class="text-center p-5" action="#!">
+
+                        <p class="h4 mb-4">Sign up</p>
+
+                        <div class="form-row mb-4">
+                            <div class="col">
+                                <!-- First name -->
+                                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <!-- Last name -->
+                                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+
+                        <!-- E-mail -->
+                        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                        <!-- Password -->
+                        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                            At least 8 characters and 1 digit
+                        </small>
+
+                        <!-- Phone number -->
+                        <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                            Optional - for two step authentication
+                        </small>
+
+                        <!-- Newsletter -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+                            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+                        </div>
+
+                        <!-- Sign up button -->
+                        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+                        <!-- Social register -->
+                        <p>or sign up with:</p>
+
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                        <hr>
+
+                        <!-- Terms of service -->
+                        <p>By clicking
+                            <em>Sign up</em> you agree to our
+                            <a href="" target="_blank">terms of service</a>
+
+                      </form>
+                      <!-- Default form register -->
+                    </li>
+                    <li>
+                      <form class="p-5">
+
+                        <p class="h4 mb-4 text-center">Sign in</p>
+                    
+                        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                    
+                        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+                    
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="">Forgot password?</a>
+                            </div>
+                        </div>
+                    
+                        <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                    
+                        <div class="text-center">
+                            <p>Not a member?
+                                <a href="">Register</a>
+                            </p>
+                    
+                            <p>or sign in with:</p>
+                            <a type="button" class="light-blue-text mx-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a type="button" class="light-blue-text mx-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a type="button" class="light-blue-text mx-2">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a type="button" class="light-blue-text mx-2">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </form>
+                    </li>
+                </ul>
+                  
+                </div>
+            </div>
+          </li>
+        </ul>
+        <div class="menu-right-content">
+          <form class="form-inline my-1">
+            <div class="md-form form-sm my-0">
+              <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+                aria-label="Search">
+            </div>
+            <div class="search-btn">
+              <a class="search-toggler nav-link">
+                <i class="fa fa-search"></i>
+              </a>
+            </div>
+            <div>
+              <img src="img/en.jpg" style="width: 20px;"><a>  En</a>
+              <img src="img/ar.png" style="width: 20px;"><a>  Ar</a>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+
+</header>
+<!--Main Navigation-->
+
+  <!--/.Navbar -->
+
+
+  <div ui-view="sub"></div>
+
+
+
+  <!-- footer section is here -->
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small white navbar-light">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5" style="height: 100px;">
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x  text-dark"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x text-dark"> </i>
+            </a>
+            <!-- Youtube -->
+            <a class="gplus-ic">
+              <i class="fab fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x text-dark"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x text-dark"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x text-dark"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      
+    </div>
+    <div class="navbar navbar-light white dip">
+      <a class="navbar-brand" href="#"><i class="fa fa-map-marker-alt"></i>  Sudan - Al-Riyadh - Alsafah Street</a>
+      <a class="navbar-brand" href="#"><i class="fa fa-clock"></i>  8:30 am - 5:00 pm</a>
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> Tobia</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

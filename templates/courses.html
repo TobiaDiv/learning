@@ -1,0 +1,111 @@
+
+  <div class="container-fluid" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-md-2 col-xs-12 col-sm-4">
+          <div><i class="fa fa-filter"></i> Filter By</div>
+          <ul uk-accordion>
+            <li class="uk-open">
+                <a class="uk-accordion-title" href="#">SKILL LEVEL</a>
+                <div class="uk-accordion-content">
+                  <ul class="list-group">
+                    <li class="list-group">Beginner</li>
+                    <li class="list-group">Intermediate</li>
+                    <li class="list-group">Proftional</li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">PRICE</a>
+                <div class="uk-accordion-content">
+                  <ul class="list-group">
+                    <li class="list-group">100$ - 700$</li>
+                    <li class="list-group">700$- 1000$</li>
+                    <li class="list-group">1000$ - 3000$</li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">SECTION</a>
+                <div class="uk-accordion-content">
+                  <ul class="list-group">
+                    <li class="list-group">LANGUAGES</li>
+                    <li class="list-group">BIOLOGY</li>
+                    <li class="list-group">SOFTWARE</li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+              <a class="uk-accordion-title" href="#">DURATION TIME</a>
+              <div class="uk-accordion-content">
+                <ul class="list-group">
+                  <li class="list-group">20+ Hours</li>
+                  <li class="list-group">40+ Hours</li>
+                  <li class="list-group">60+ Hours</li>
+                  <li class="list-group">80+ Hours</li>
+                  <li class="list-group">90+ Hours</li>
+                </ul>
+              </div>
+          </li>
+        </ul>
+
+
+        </div>
+        <div class="col-md-10 col-sm-8 col-xs-12">
+          
+          <ul class="nav nav-tabs wow animate__animated animate__fadeInUp animate__delay-1s" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active text-dark" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true" ng-click="ev($event)">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                  aria-selected="false" ng-click="ev($event)">Languages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                  aria-selected="false" ng-click="ev($event)">Biology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                  aria-selected="false" ng-click="ev($event)">SoftWare</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 wow animate__animated animate__fadeInUp animate__delay-1s" ng-repeat="course in courses" style="margin-top: 25px;">
+                      <div class="card">
+
+                      <!-- Card image -->
+                      <div class="view overlay">
+                        <img class="card-img-top img-over"src="{{course.img}}"
+                          alt="Card image cap">
+                        <a href="#!" ng-click="ev($event)" >
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                        <!-- Course content -->
+                        <div class="card-body">
+                      
+                          <!-- Title -->
+                          <h4 class="card-title">{{course.name}}</h4>
+                          <!-- Text -->
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, culpa.</p>
+                          <!-- Button -->
+                          
+                          <md-button class="btn btn-primary" ui-sref="app.course" ng-click="send(course)">MORE</md-button>
+                          </span><span class="fa fa-heart float-rigth {{animate}}" ng-click="inc($index)"></span>
+                          <span class="{{animate}} {{delAni}} te">{{course.like}}</span>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
